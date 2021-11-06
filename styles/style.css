@@ -1,0 +1,187 @@
+body {
+  font-family: "Inter", Arial, sans-serif;
+}
+section {
+  border: 10px solid rgb(240, 26, 115);
+}
+div {
+  border: 2px dashed rgb(11, 146, 45);
+}
+h1 {
+  border: 2px solid rgb(246, 250, 2);
+}
+h2 {
+  border: 2px solid rgb(231, 18, 250);
+}
+p {
+  border: 2px solid rgb(58, 14, 253);
+}
+.page {
+  min-width: 1100px;
+  /* мы ещё не умеем делать мобильную версию сайта, */
+  /* поэтому выше установлена минимальная ширина страницы */
+  max-width: 1600px;
+  /* выше установили ограничение по максимальной ширине */
+  margin: 0 auto;
+  /* выше для экранов больше 1600px отцентрировали весь контент */
+  font-family: "Inter", Arial, sans-serif;
+}
+.header {
+  height: 100vh;
+  min-height: 600px;
+  max-height: 756px;
+  /* выше установили ограничения для секции */
+}
+/* Ниже общее описание страницы - секция Description*/
+.page-description {
+  width: 80%;
+  margin: 100px auto 0;
+}
+.two-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.two-columns__brief {
+  color: #2f80ed;
+  margin-top: 0%;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  display: flex;
+  width: 175px;
+}
+.two-columns__main-text {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  min-width: 784px;
+}
+.two-columns__paragraph {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+.two-columns__conclusion {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.two-columns__paragraph_medium {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.two-columns__paragraph_up-down {
+  margin: 0;
+}
+/* Ниже описание секции "Техники обучения */
+.tecniques {
+  width: 80%;
+  margin: 0 auto;
+}
+.section-title {
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  width: 60%;
+  margin: 100px auto 20px;
+}
+.section-subtitle {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.cards {
+  width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cards__title {
+  width: 240px;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto 16px;
+}
+.cards__description {
+  width: 240px;
+  text-align: center;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.cards__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cards__item_last {
+  margin-left: 100px;
+  margin-right: auto;
+  align-self: flex-end;
+}
+.cards__image {
+  width: 160px;
+  height: 160px;
+  margin: 60px 40px 43px;
+}
+/*Ниже описание секции "Цифры и факты"*/
+.table {
+  width: 1100px;
+  margin: 0 auto 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.table__cell {
+  width: 250px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.table__heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.table__text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+/* Ниже описание страницы "Принципы обучения"*/
+.kaufman {
+  background-color: black;
+}
+.section-title_theme_dark {
+  color: white;
+  margin-top: 90px;
+}
+.section-subtitle_theme_dark {
+  color: white;
+}
+.table__cell_theme_dark {
+  width: 200px;
+  color: white;
+  margin-right: 0;
+  margin-top: 80px;
+}
+/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__square-pic {
+  height: 568px;
+  width: 568px;
+}
+
+/* и элемента с модификатором вида ключ-значение */
