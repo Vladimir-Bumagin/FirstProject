@@ -1,6 +1,15 @@
-body {
+.page {
+  min-width: 1100px;
+  /* мы ещё не умеем делать мобильную версию сайта, */
+  /* поэтому выше установлена минимальная ширина страницы */
+  max-width: 1600px;
+  /* выше установили ограничение по максимальной ширине */
+  margin: 0 auto;
+  /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: "Inter", Arial, sans-serif;
+  background-color: #f2f2f2;
 }
+
 section {
   border: 10px solid rgb(240, 26, 115);
 }
@@ -16,22 +25,67 @@ h2 {
 p {
   border: 2px solid rgb(58, 14, 253);
 }
-.page {
-  min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
-  max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
-  margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: "Inter", Arial, sans-serif;
-}
 .header {
+  display: flex;
+  align-items: center;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  position: relative;
   /* выше установили ограничения для секции */
 }
+.logo {
+  width: 183px;
+  height: 32px;
+}
+.logo_place_header {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  z-index: 1;
+}
+.header__title {
+  max-width: 730px;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: bold;
+  margin-left: 64px;
+  z-index: 1;
+}
+.header__subtitle {
+  margin: 0%;
+  position: absolute;
+  left: 64px;
+  bottom: 30px;
+  max-width: 388px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  z-index: 1;
+}
+.header__link {
+  text-decoration: none;
+  color: #2f80ed;
+  transition: opacity 0.2s linear;
+  cursor: pointer;
+}
+.header__main-illustration {
+  width: 765px;
+  height: 608px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.header__square-pic {
+  background-size: cover;
+  background-color: #2f80ed;
+  height: 568px;
+  width: 568px;
+  position: absolute;
+  top: 64px;
+  right: 0;
+}
+
 /* Ниже общее описание страницы - секция Description*/
 .page-description {
   width: 80%;
@@ -161,7 +215,7 @@ p {
   font-weight: normal;
   margin-bottom: 20px;
 }
-/* Ниже описание страницы "Принципы обучения"*/
+/* Ниже описание секции "Принципы обучения"*/
 .kaufman {
   background-color: black;
 }
@@ -178,10 +232,87 @@ p {
   margin-right: 0;
   margin-top: 80px;
 }
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
-.header__square-pic {
-  height: 568px;
-  width: 568px;
+/* ниже описание секции "Ресурсы"*/
+.resources {
+  align-items: center;
+}
+.resources__logo-zone {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  margin: 80px auto 217px;
+}
+.resources-logo {
+  width: 270px;
+  height: 38px;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+/* Ниже описание Footer*/
+.footer {
+  min-height: 350px;
+  display: flex;
+  background-color: #000;
+}
+.columns {
+  color: white;
+  margin: 60px auto 40px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__column_content_copyright {
+  flex-basis: 711px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logo_place_footer {
+  height: 35px;
+}
+.footer__author {
+  margin: 18px auto 18px 0;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.footer__column_content_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.footer__column-heading {
+  margin: 0 0 20px;
+
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.footer__column_content_social {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.footer__column-links {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+.footer__column-link {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: white;
+}
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
+}
