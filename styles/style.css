@@ -9,6 +9,13 @@
   font-family: "Inter", Arial, sans-serif;
   background-color: #f2f2f2;
 }
+a {
+  opacity: 1;
+}
+a:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
 
 section {
   border: 10px solid rgb(240, 26, 115);
@@ -87,18 +94,19 @@ p {
 }
 
 /* Ниже общее описание страницы - секция Description*/
-.page-description {
-  width: 80%;
-  margin: 100px auto 0;
+.description {
+  display: flex;
+  justify-content: center;
 }
 .two-columns {
+  width: 80%;
   display: flex;
-  flex-direction: row;
+
   justify-content: space-between;
 }
 .two-columns__brief {
   color: #2f80ed;
-  margin-top: 0%;
+  margin: 100px auto 0 0;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -106,6 +114,7 @@ p {
   width: 175px;
 }
 .two-columns__main-text {
+  margin: 100px 0 0 auto;
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -130,8 +139,13 @@ p {
 }
 /* Ниже описание секции "Техники обучения */
 .tecniques {
+  box-sizing: border-box;
+  padding: 100px 0 0;
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .section-title {
   line-height: 1.15;
@@ -139,7 +153,7 @@ p {
   font-weight: bold;
   text-align: center;
   width: 60%;
-  margin: 100px auto 20px;
+  margin: 0 auto 20px;
 }
 .section-subtitle {
   line-height: 34px;
@@ -151,10 +165,9 @@ p {
 }
 .cards {
   width: 920px;
-  margin: 0 auto;
+
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 .cards__title {
@@ -173,16 +186,16 @@ p {
   font-weight: normal;
 }
 .cards__item {
+  margin-right: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-.cards__item_last {
-  margin-left: 100px;
-  margin-right: auto;
-  align-self: flex-end;
+.cards__item:nth-of-type(3n) {
+  margin-right: 0;
 }
+
 .cards__image {
   border-radius: 50%;
   width: 160px;
@@ -190,9 +203,17 @@ p {
   margin: 60px 40px 43px;
 }
 /*Ниже описание секции "Цифры и факты"*/
+.digits {
+  box-sizing: border-box;
+  padding: 100px 0 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .table {
   width: 1100px;
-  margin: 0 auto 100px;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -218,11 +239,16 @@ p {
 }
 /* Ниже описание секции "Принципы обучения"*/
 .kaufman {
+  box-sizing: border-box;
+  padding: 90px 0 90px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: black;
 }
 .section-title_theme_dark {
   color: white;
-  margin-top: 90px;
 }
 .section-subtitle_theme_dark {
   color: white;
@@ -235,6 +261,8 @@ p {
 }
 /* ниже описание секции "Ресурсы"*/
 .resources {
+  box-sizing: border-box;
+  padding-top: 100px;
   align-items: center;
 }
 .resources__logo-zone {
@@ -252,11 +280,13 @@ p {
 .footer {
   min-height: 350px;
   display: flex;
+  justify-content: center;
+  padding: 60px 0 40px;
   background-color: #000;
 }
 .columns {
   color: white;
-  margin: 60px auto 40px;
+
   width: 90%;
   display: flex;
   justify-content: space-between;
