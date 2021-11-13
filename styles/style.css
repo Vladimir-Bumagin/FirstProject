@@ -101,7 +101,6 @@ p {
 .two-columns {
   width: 80%;
   display: flex;
-
   justify-content: space-between;
 }
 .two-columns__brief {
@@ -124,19 +123,25 @@ p {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+  margin: 0 0 30px 0;
 }
-.two-columns__conclusion {
+/* Убираем нижний отступ у последнего параграфа*/
+.two-columns__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.two-columns__span-accent {
   line-height: 34px;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
 }
-.two-columns__paragraph_medium {
+/*.two-columns__paragraph_medium {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 .two-columns__paragraph_up-down {
   margin: 0;
-}
+}*/
 /* Ниже описание секции "Техники обучения */
 .tecniques {
   box-sizing: border-box;
@@ -247,6 +252,9 @@ p {
   align-items: center;
   background-color: black;
 }
+.table_theme_dark {
+  color: white;
+}
 .section-title_theme_dark {
   color: white;
 }
@@ -258,6 +266,12 @@ p {
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+.table__heading_theme_dark {
+  color: white;
+}
+.table__text_theme_dark {
+  color: white;
 }
 /* ниже описание секции "Ресурсы"*/
 .resources {
@@ -278,13 +292,14 @@ p {
 
 /* Ниже описание Footer*/
 .footer {
+  box-sizing: border-box;
   min-height: 350px;
   display: flex;
   justify-content: center;
   padding: 60px 0 40px;
   background-color: #000;
 }
-.columns {
+.footer__columns {
   color: white;
 
   width: 90%;
