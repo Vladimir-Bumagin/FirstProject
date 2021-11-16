@@ -1,4 +1,5 @@
 .header__square-pic {
+  transform: rotate(15deg);
   background-size: cover;
   background-color: #2f80ed;
   height: 568px;
